@@ -5,7 +5,7 @@
 	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
-	<url value="http://fhir.scwjxx.cn/Sichuan/ImplementationGuide/NZ-Health-Card-R4"/>
+	<url value="http://press.hl7fhir.cn/ImplementationGuide/NZ-Health-Card-R4"/>
 	<!-- 此实施指南的版本。除非指定了 "propagate-version" 扩展元素，否则所有引用资源都将继承此版本号 -->
 	<version value="0.0.2"/>
 	<name value="NZ Health Card IG"/>
