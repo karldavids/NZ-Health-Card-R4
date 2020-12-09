@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Person" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-05-11T06:32:25.0842473+00:00" />
+  </meta>
+  <url value="http://StructureDefinition.hl7fhir.cn/Person" />
+  <name value="Person" />
+  <title value="居民" />
+  <status value="draft" />
+  <date value="2019-10-16" />
+  <description value="居民，用于建档注册。可用作EMPI主索引。，可关联其他自然人、患者、医生等。扩展了籍贯、学历、国籍等。" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Person" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Person" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Person">
+      <path value="Person" />
+      <short value="居民档案" />
+      <definition value="和医疗记录无关的人口学个人档案。可用作EMPI主索引。" />
+      <comment value="居民资源是与人相关的人口(学)信息和管理信息，它与特定健康相关场景无关，主要用于人口档案的建档与注册。 此资源是作为EMPI主索引的重要资源，它可链接到此人的一个特定角色，如患者，从业者和照护人员。 它保持着简练的与人相关的属性。与角色有关的属性，不与此资源直接联系在一起，而是包含在那此具有角色特性的资源里。 例如监护人、联系人、从业者等。" />
+    </element>
+    <element id="Person.extension">
+      <path value="Person.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Person.extension:academicQualification">
+      <path value="Person.extension" />
+      <sliceName value="academicQualification" />
+      <definition value="教育背景，非学位" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/AcademicQualification" />
+      </type>
+    </element>
+    <element id="Person.extension:nationality">
+      <path value="Person.extension" />
+      <sliceName value="nationality" />
+      <definition value="是哪（几）国的居民" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Nationality" />
+      </type>
+    </element>
+    <element id="Person.extension:ethnicity">
+      <path value="Person.extension" />
+      <sliceName value="ethnicity" />
+      <definition value="中华56个民族中的哪个。仅供华人填写" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/ChineseEthnicity" />
+      </type>
+    </element>
+    <element id="Person.extension:birthPlace">
+      <path value="Person.extension" />
+      <sliceName value="birthPlace" />
+      <short value="籍贯" />
+      <definition value="籍贯，即出生地的行政区" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/AdministrativeDivision" />
+      </type>
+    </element>
+    <element id="Person.name">
+      <path value="Person.name" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/ChineseName" />
+      </type>
+    </element>
+    <element id="Person.telecom">
+      <path value="Person.telecom" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/ContactPoint" />
+      </type>
+    </element>
+    <element id="Person.birthDate">
+      <path value="Person.birthDate" />
+      <short value="出生日期" />
+      <definition value="描述这个人的出生日期。" />
+    </element>
+    <element id="Person.address">
+      <path value="Person.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Address" />
+      </type>
+    </element>
+    <element id="Person.photo">
+      <path value="Person.photo" />
+      <short value="照片" />
+      <definition value="一种图像，可以显示为一个人的缩略图，以增强个人的识别。" />
+      <type>
+        <code value="Attachment" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Attachment" />
+      </type>
+    </element>
+    <element id="Person.managingOrganization">
+      <path value="Person.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Organization" />
+      </type>
+    </element>
+    <element id="Person.active">
+      <path value="Person.active" />
+      <short value="状态" />
+      <definition value="此人的记录是否被有效使用。" />
+    </element>
+    <element id="Person.link.target">
+      <path value="Person.link.target" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/Reference" />
+        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Person" />
+        <targetProfile value="http://StructureDefinition.hl7fhir.cn/Patient" />
+        <targetProfile value="http://StructureDefinition/hl7fhir.cn/Practitioner" />
+        <targetProfile value="http://StructureDefinition.hl7fhir.cn/RelatedPerson" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

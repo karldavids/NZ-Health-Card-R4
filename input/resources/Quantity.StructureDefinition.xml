@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Quantity" />
+  <url value="http://StructureDefinition.hl7fhir.cn/Quantity" />
+  <name value="Quantity" />
+  <title value="数量类型" />
+  <status value="draft" />
+  <description value="用于计量的数据数型，表示一个可以被测量的数量）。包括没有精确量化部分的数量，如无量纲量（arbitrary unit，即在相同度量条件下各数据间的相对大小）、浮动货币等。" />
+  <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Quantity" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Quantity" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Quantity">
+      <path value="Quantity" />
+      <short value="数量" />
+      <definition value="计量的量（或一个可以被测量的数量）。注意，计量数量包括没有精确量化部分的数量，如无量纲量（arbitrary unit，即在相同度量条件下各数据间的相对大小）、浮动货币等。" />
+      <comment value="需要通过具体的场景来确定数量的类型和单位。使用场景还可能约束Quantity.comparator的值。" />
+    </element>
+    <element id="Quantity.value">
+      <path value="Quantity.value" />
+      <short value="数值" />
+      <definition value="测量出来的值。该值的精度由其自身的表现形式决定。如“3.2”的精度低于“3.20”。" />
+      <comment value="应该重视数值格式中所暗含的精度意义。如：货币类型的数值有自己的处理精度规则" />
+      <requirements value="计量值的精度几乎都暗含在其表示格式中。" />
+    </element>
+    <element id="Quantity.comparator">
+      <path value="Quantity.comparator" />
+      <short value="&lt; | &lt;= | &gt;= | &gt; - 与实际值的比较" />
+      <definition value="应该如何理解和表示计量的值——由于测量问题，实际值与声明的计量值之间的关系；例如，如果此值为“&lt;”，则实际值比声明的值更小。" />
+      <comment value="如果是简单数据类型（SimpleQuantity），则不允许使用此元素" />
+      <requirements value="由于测量方法的限制，需要一个框架可用于处理测量值小于5ug/L或大于400mg/L的情况。" />
+      <meaningWhenMissing value="如果此元素缺失，则实际值就是声明的计量值" />
+      <isModifierReason value="改变此元素的值会使整个计量值的意义发生重大变化。" />
+    </element>
+    <element id="Quantity.unit">
+      <path value="Quantity.unit" />
+      <short value="单位" />
+      <definition value="计量值所使用的度量单位。" />
+      <requirements value="度量单位有许多表示方式，对于特定的度量一般都有固定的强制要求。比如，用&quot;mcg&quot;来表示单位“微克”。" />
+    </element>
+    <element id="Quantity.system">
+      <path value="Quantity.system" />
+      <short value="单位编码所属系统" />
+      <definition value="以编码表示的度量单位所属的系统标识。" />
+      <comment value="参见：http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <requirements value="通过单位编码的所属系统才能准确理解编码的含义" />
+    </element>
+    <element id="Quantity.code">
+      <path value="Quantity.code" />
+      <short value="单位编码" />
+      <definition value="在某些单位表示系统中，单位的编码形式，可用于计算机处理。" />
+      <comment value="从编码的选用角度，首选系统是UCUM（Unified Code for Units of Measure，计量单位统一代码），其次是SNOMED CT（ 惯用单位）或 ISO 4217（货币单位）。在特定的场景中可能还需要用到其它系统的单位编码。" />
+      <requirements value="在单位的所有表现形式中，需要一个可供计算机处理的固定形式。UCUM编码系统为计量单位提供了这种形式，而SNOMED CT也提供了许多有趣的单位编码。" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ContactDetail" />
+  <url value="http://StructureDefinition.hl7fhir.cn/ContactDetail" />
+  <name value="ContactDetail" />
+  <title value="联系人信息" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="ContactDetail" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactDetail" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ContactDetail">
+      <path value="ContactDetail" />
+      <short value="联系人信息" />
+      <definition value="个人或组织的联系信息。" />
+      <comment value="可以是网站、电子邮件地址、电话号码等。" />
+    </element>
+    <element id="ContactDetail.name">
+      <path value="ContactDetail.name" />
+      <label value="联系人" />
+      <short value="联系人姓名" />
+      <definition value="具体的联系人姓名" />
+      <comment value="如果没有指定具体联系人的姓名，则联系方式的信息是针对整个组织的。" />
+    </element>
+    <element id="ContactDetail.telecom">
+      <path value="ContactDetail.telecom" />
+      <label value="联系方式" />
+      <comment value="可以是网站、电子邮件地址、电话号码等。" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/ContactPoint" />
+      </type>
+    </element>
+    <element id="ContactDetail.telecom.period">
+      <path value="ContactDetail.telecom.period" />
+      <label value="时段范围" />
+    </element>
+  </differential>
+</StructureDefinition>
