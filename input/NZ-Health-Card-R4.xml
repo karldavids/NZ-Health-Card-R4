@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 此资源所引用的内容都将作为指南的一部分生成。持续更新中 -->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+	<id value="NZ-Health-Card-IG"/>
+	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
+    <valueString value="resources-spreadsheet.xml"/>
+  </extension>-->
+	<url value="http://fhir.scwjxx.cn/Sichuan/ImplementationGuide/NZ-Health-Card-R4"/>
+	<!-- 此实施指南的版本。除非指定了 "propagate-version" 扩展元素，否则所有引用资源都将继承此版本号 -->
+	<version value="0.0.2"/>
+	<name value="NZ Health Card IG"/>
+	<title value="南漳县电子健康卡+便民服务平台实施指南"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<publisher value="HL7FHIR.NZ" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="https://www.hl7fhir.cn"/>
+		</telecom>
+		<telecom>
+			<system value="email"/>
+			<value value="contact@hl7fhir.cn"/>
+		</telecom>
+	</contact>
+	<description value="南漳县电子健康卡+便民服务平台实施指南是[中国核心实施指南](http://build.fhir.org/ig/HL7China/CN-CORE-R4/)规范集中的一个子规范。
+它基于核心指南定义了南漳县电子健康卡+便民服务平台信息化所涉及的通用资源与常用场景，它与其它子规范一起组成了中国核心指南的规范集。"/>
+	<jurisdiction>
+		<coding>
+			<system value="http://CodeSystem.hl7fhir.cn/countries-and-regions"/>
+			<code value="156"/>
+		</coding>
+		<text value="中国"/>
+	</jurisdiction>
+	<packageId value="hl7fhir.cn.core.r4.health-card.nz" />
+	<!-- 参见 https://spdx.org/licenses/AGPL-3.0-or-later.html -->
+	<license value="AGPL-3.0-or-later" />
+	<!-- 实施指南里的内容是基于FHIR R4版本的 -->
+	<fhirVersion value="4.0.1"/>
+	<definition>
+		<!--0..* 生成IG需求信息。其中grouping节点可由IGPublisher自动定义，也可手动定义个性化需求。 -->
+
+		
+	
+		<resource>
+			<reference>
+				<!-- 本地资源定义（Hospital） -->
+				<reference value="StructureDefinition/Hospital"/>
+			</reference>
+			<description value="描述医院基本信息"/>
+		</resource>
+
+		
+
+		<!--    <resource>
+      <reference>
+        <reference value="Library/example"/>
+      </reference>
+      <name value="Simple library example"/>
+      <description value="A simple example showing how library is pre-loaded"/>
+    </resource> -->
+		<page>
+			<!-- 若不指定目录页面，模板将强制为 toc.html -->
+			<nameUrl value="toc.html"/>
+			<title value="目录"/>
+			<generation value="html"/>
+			<page>
+				<nameUrl value="index.html"/>
+				<title value="首页"/>
+				<generation value="markdown"/>
+			</page>
+			<page>
+                <nameUrl value="spec.html"/>
+                <title value="规范定义"/>
+                <generation value="markdown"/>
+
+               <page>
+                   <nameUrl value="profiles.html"/>
+                   <title value="资源结构"/>
+                   <generation value="markdown"/>
+              </page>
+
+               <page>
+                  <nameUrl value="extensions.html"/>
+                  <title value="扩展元素"/>
+                  <generation value="markdown"/>
+               </page>
+
+               <page>
+                  <nameUrl value="terminology.html"/>
+                   <title value="术语编码"/>
+                  <generation value="markdown"/>
+               </page>
+
+                <page>
+                  <nameUrl value="REST.html"/>
+                  <title value="微服务API"/>
+                   <generation value="markdown"/>
+               </page>
+
+                <page>
+                   <nameUrl value="messages.html"/>
+                   <title value="消息交换"/>
+                   <generation value="markdown"/>
+              </page>
+
+           </page>
+
+<page>
+<nameUrl value="useage-scenarios.html"/>
+<title value="使用场景"/>
+<generation value="markdown"/>
+			<page>
+                 <nameUrl value="hospital-referral.html"/>
+				<title value="基础场景"/>
+				<generation value="markdown"/> 
+              </page>
+</page>
+
+			 
+
+		  	 <page>
+               <nameUrl value="downloads.html"/>
+    			<title value="下载"/>
+    			<generation value="html"/>
+ 			 </page>
+			<!-- 
+			<page>
+				<nameUrl value="changes.html"/>
+				<title value="指南历史版本"/>
+				<generation value="html"/>
+			</page>
+			-->
+		</page>
+		<!-- copyright year 是IGPublisher的强制参数 -->
+		<parameter>
+			<code value="copyrightyear"/>
+			<value value="2020+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="find-other-resources"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+			<code value="path-resource"/>
+			<value value="input\history"/>
+		</parameter>
+		<parameter>
+			<code value="path-binary"/>
+			<value value="input\cql"/>
+		</parameter>
+		<parameter>
+			<code value="path-liquid"/>
+			<value value="templates\liquid"/>
+		</parameter>
+		<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
+	</definition>
+</ImplementationGuide>
