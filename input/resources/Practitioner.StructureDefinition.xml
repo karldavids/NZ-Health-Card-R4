@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Practitioner" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:47:15.997+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Practitioner" />
   <name value="Practitioner" />
   <title value="医护人员" />
   <status value="draft" />
+  <date value="2020-12-07T02:47:16.3767169+00:00" />
   <publisher value="hl7.Fhir.cn/CW" />
   <description value="直接或间接参与提供医疗健康服务的人员及其从业资格证" />
   <fhirVersion value="4.0.1" />
@@ -203,12 +208,6 @@
       <short value="生理性别" />
       <definition value="GB/T 2261.1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="AdministrativeGender" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <description value="生理性别" />
       </binding>

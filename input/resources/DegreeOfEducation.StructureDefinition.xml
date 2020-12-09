@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="BriefIntroduction" />
+  <id value="degree-of-education" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2020-12-07T01:37:18.649+00:00" />
+    <lastUpdated value="2020-12-07T01:53:05.502+00:00" />
   </meta>
-  <url value="http://StructureDefinition.hl7fhir.cn/BriefIntroduction" />
-  <name value="BriefIntroduction" />
-  <title value="简要介绍" />
+  <url value="http://StructureDefinition.hl7fhir.cn/degree-of-education" />
+  <name value="DegreeOfEducation" />
+  <title value="学历" />
   <status value="draft" />
-  <date value="2020-12-07T01:37:19.1853092+00:00" />
-  <description value="包括科室、医院、医护人员介绍" />
+  <date value="2020-12-07T01:53:06.072151+00:00" />
+  <description value="教育背景，非学位" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />
@@ -21,15 +21,15 @@
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Organization" />
+    <expression value="Patient" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Person" />
   </context>
   <context>
     <type value="element" />
     <expression value="Practitioner" />
-  </context>
-  <context>
-    <type value="element" />
-    <expression value="CareTeam" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -37,18 +37,26 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="简要介绍" />
-      <definition value="科室、医院、医护人员的简要介绍" />
+      <short value="学历" />
+      <definition value="教育背景" />
+      <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://StructureDefinition.hl7fhir.cn/BriefIntroduction" />
+      <fixedUri value="http://StructureDefinition.hl7fhir.cn/degree-of-education" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <short value="学历代码" />
+      <definition value="学历代码GB/T 4658" />
       <type>
-        <code value="string" />
+        <code value="Coding" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="学历代码GB/T 4658" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/education-vs" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

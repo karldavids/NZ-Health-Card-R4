@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Hospital" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2020-12-07T01:59:41.313+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Hospital" />
   <name value="Hospital" />
   <title value="医院信息" />
   <status value="draft" />
+  <date value="2020-12-07T01:57:54.026089Z" />
   <description value="医院基本信息" />
   <fhirVersion value="4.0.0" />
   <mapping>
@@ -30,7 +35,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://StructureDefinition.hl7fhir.cn/Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
@@ -89,18 +94,56 @@
       <short value="其他编码" />
       <definition value="医院其他业务编码" />
     </element>
-    <element id="Organization.type:economicType">
+    <element id="Organization.type">
       <path value="Organization.type" />
-      <sliceName value="economicType" />
-      <short value="经济类型别" />
-      <definition value="医院的经济类型别  国有全资、集体全资、联营、外资 等" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="机构种类、类别" />
+      <definition value="机构种类，如医院、卫生防疫站等。类别" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
+      </type>
+    </element>
+    <element id="Organization.type:healthInstitutionCategory">
+      <path value="Organization.type" />
+      <sliceName value="healthInstitutionCategory" />
+      <short value="卫生机构(组织)类别" />
+      <definition value="WS 218-2002，卫生机构(组织)类别" />
       <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="OrganizationType" />
-        </extension>
-        <strength value="example" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/economic-type-classification-vs" />
+        <strength value="required" />
+        <description value="WS 218-2002" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/health-institution-category-vs" />
+      </binding>
+    </element>
+    <element id="Organization.type:hierarchyKind">
+      <path value="Organization.type" />
+      <sliceName value="hierarchyKind" />
+      <short value="层级种类" />
+      <definition value="组织层级种类，如医院集团、医院、院区、科室等" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="组织层级种类" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/hierarchy-kind-vs" />
+      </binding>
+    </element>
+    <element id="Organization.type:ClassificationForOrganizations">
+      <path value="Organization.type" />
+      <sliceName value="ClassificationForOrganizations" />
+      <short value="组织机构类型" />
+      <definition value="《组织机构类型(GB/T 20091-2006)》" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="GB/T 20091-2006" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/Classification-for-organizations-vs" />
       </binding>
     </element>
     <element id="Organization.type:hospitalLevel">
@@ -108,13 +151,30 @@
       <sliceName value="hospitalLevel" />
       <short value="医院等级" />
       <definition value="国际医院等级，如 三甲  三乙 二甲" />
+      <max value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="OrganizationType" />
-        </extension>
         <strength value="example" />
+        <description value="医院等级" />
         <valueSet value="http://ValueSet.hl7fhir.cn/hospitallevel-vs" />
       </binding>
+    </element>
+    <element id="Organization.type:economicType">
+      <path value="Organization.type" />
+      <sliceName value="economicType" />
+      <short value="经济类型" />
+      <definition value="医院的经济类型别  国有全资、集体全资、联营、外资 等" />
+      <max value="1" />
+      <binding>
+        <strength value="example" />
+        <description value="经济类型" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/economic-type-classification-vs" />
+      </binding>
+    </element>
+    <element id="Organization.type:otherType">
+      <path value="Organization.type" />
+      <sliceName value="otherType" />
+      <short value="其它分类" />
+      <definition value="按其它分类维度对组织机构分类" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />

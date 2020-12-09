@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Quantity" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:47:35.706+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Quantity" />
   <name value="Quantity" />
   <title value="数量类型" />
   <status value="draft" />
+  <date value="2020-12-07T02:47:36.3494721+00:00" />
   <description value="用于计量的数据数型，表示一个可以被测量的数量）。包括没有精确量化部分的数量，如无量纲量（arbitrary unit，即在相同度量条件下各数据间的相对大小）、浮动货币等。" />
   <fhirVersion value="4.0.0" />
   <mapping>

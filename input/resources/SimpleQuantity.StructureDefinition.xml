@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="SimpleQuantity" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:49:42.674+00:00" />
+  </meta>
+  <url value="http://StructureDefinition.hl7fhir.cn/SimpleQuantity" />
+  <name value="SimpleQuantity" />
+  <title value="简单数量类型" />
+  <status value="draft" />
+  <date value="2020-12-07T02:49:43.3377538+00:00" />
+  <description value="一个可以被测量的简单数量。需要通过具体的场景来确定数量的类型和单位。简单数量不能使用“值比较器”（comparetor）来对来实际值与声明的计量值之间的大小。" />
+  <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Quantity" />
+  <baseDefinition value="http://StructureDefinition.hl7fhir.cn/Quantity" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Quantity">
+      <path value="Quantity" />
+      <short value="简单数量" />
+      <definition value="一个可以被测量的简单数量。" />
+      <comment value="需要通过具体的场景来确定数量的类型和单位。简单数量不能使用“值比较器”（comparetor）来对来实际值与声明的计量值之间的大小。" />
+    </element>
+    <element id="Quantity.comparator">
+      <path value="Quantity.comparator" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

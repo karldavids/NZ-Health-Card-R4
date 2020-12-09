@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="date-start-work" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T01:52:57.459+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/date-start-work" />
   <name value="DateStartWork" />
   <title value="参加工作日期" />
   <status value="draft" />
+  <date value="2020-12-07T01:52:58.0146704+00:00" />
   <description value="描述该人员参加工作的开始日期" />
   <fhirVersion value="4.0.0" />
   <mapping>

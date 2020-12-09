@@ -3,13 +3,13 @@
   <id value="ChineseName" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2019-12-11T05:21:01.594+00:00" />
+    <lastUpdated value="2020-12-07T01:51:14.418+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/ChineseName" />
   <name value="ChineseName" />
   <title value="姓名" />
   <status value="draft" />
-  <date value="2019-12-11T05:21:00.4599167Z" />
+  <date value="2020-12-07T01:51:14.959904+00:00" />
   <publisher value="hl7fhir.cn" />
   <description value="中国卫生健康场景中使用的姓名" />
   <fhirVersion value="4.0.0" />
@@ -50,7 +50,7 @@
       <binding>
         <strength value="required" />
         <description value="姓名类别" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/name-type" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/name-type-vs" />
       </binding>
     </element>
     <element id="HumanName.text">

@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="CodeableConcept" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2020-03-16T15:16:22.934+00:00" />
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T01:51:39.156+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
   <name value="CodeableConcept" />
   <title value="可编码概念" />
   <status value="draft" />
-  <date value="2020-03-16T15:16:13.8885423Z" />
+  <date value="2020-12-07T01:51:39.6011978+00:00" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="v2" />
@@ -42,7 +42,6 @@
       <path value="CodeableConcept.coding" />
       <label value="编码概念" />
       <short value="由术语系统定义的编码" />
-      <definition value="一个引用自术语系统定义的编码。" />
       <comment value="编码可以使用枚举值或编码列表非常随意地定义。也可以非常正式的定义，如SNOMED CT。请参阅HL7 v3核心原则。 此类型并未定义编码的顺序，并不得用于推断含义。通常，最多只有一个Coding的UserSelected属性被标记为true。" />
       <requirements value="允许在代码系统中使用备用编码，并支持转换为其他代码系统。" />
       <type>

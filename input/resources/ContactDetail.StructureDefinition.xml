@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ContactDetail" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T01:51:52.959+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/ContactDetail" />
   <name value="ContactDetail" />
   <title value="联系人信息" />
   <status value="draft" />
+  <date value="2020-12-07T01:51:53.5218436+00:00" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />

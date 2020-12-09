@@ -3,13 +3,13 @@
   <id value="ContactPoint" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2019-12-11T06:26:55.852+00:00" />
+    <lastUpdated value="2020-12-07T01:52:06.405+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/ContactPoint" />
   <name value="ContactPoint" />
   <title value="联系方式" />
   <status value="draft" />
-  <date value="2019-12-11T06:26:55.3669966Z" />
+  <date value="2020-12-07T01:52:06.8596727+00:00" />
   <publisher value="hl7fhir.cn" />
   <description value="联系方式，包括电话、传真、邮件等" />
   <fhirVersion value="4.0.0" />
@@ -47,7 +47,7 @@
       <binding>
         <strength value="required" />
         <description value="联系方式种类" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-system" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-system-vs" />
       </binding>
     </element>
     <element id="ContactPoint.value">
@@ -65,7 +65,7 @@
       <binding>
         <strength value="required" />
         <description value="号码用途" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-use" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/contact-point-use-vs" />
       </binding>
     </element>
     <element id="ContactPoint.rank">

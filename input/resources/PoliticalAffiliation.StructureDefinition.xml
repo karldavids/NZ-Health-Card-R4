@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="politic-affiliation" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:47:02.972+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/politic-affiliation" />
   <name value="PoliticalAffiliation" />
   <title value="政治面貌" />
   <status value="draft" />
+  <date value="2020-12-07T02:47:03.6377011+00:00" />
   <publisher value="hl7fhir.cn" />
   <description value="政治面貌的编码及加入日期" />
   <fhirVersion value="4.0.1" />
@@ -25,7 +30,7 @@
   </context>
   <context>
     <type value="element" />
-    <expression value="Paitent" />
+    <expression value="Patient" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />

@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Identifier" />
   <meta>
-    <versionId value="4" />
-    <lastUpdated value="2020-03-30T15:04:02.242+00:00" />
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:04:45.754+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Identifier" />
   <name value="Identifier" />
   <title value="标识符" />
   <status value="draft" />
-  <date value="2020-03-30T15:03:36.6310405Z" />
+  <date value="2020-12-07T02:04:46.2231657+00:00" />
   <description value="标识符，唯一且明确地标识某个域中的实体。常作为业务标识符（业务ID)使用，在不同业务域中的唯一标识ID" />
   <fhirVersion value="4.0.0" />
   <mapping>
@@ -60,12 +60,6 @@
         <profile value="http://StructureDefinition.hl7fhir.cn/CodeableConcept" />
       </type>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="IdentifierType" />
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="extensible" />
         <description value="待完善，目前暂用身份证件类别，CV02.01.101，整理自《WS 364-2011_卫生信息数据元值域代码》" />
         <valueSet value="http://ValueSet.hl7fhir.cn/identity-document-type-vs" />

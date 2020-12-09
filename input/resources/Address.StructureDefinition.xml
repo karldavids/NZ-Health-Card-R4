@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Address" />
   <meta>
@@ -61,7 +61,7 @@
       <short value="行政区划编码" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/AdministrativeDivision" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/administrative-division" />
       </type>
     </element>
     <element id="Address.use">
@@ -71,7 +71,7 @@
       <binding>
         <strength value="required" />
         <description value="地址用途类别" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/address-use" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/address-use-vs" />
       </binding>
     </element>
     <element id="Address.type">

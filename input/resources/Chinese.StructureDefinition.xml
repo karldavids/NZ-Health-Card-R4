@@ -3,13 +3,13 @@
   <id value="Person" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2020-05-11T06:32:25.0842473+00:00" />
+    <lastUpdated value="2020-12-07T01:50:39.578+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Person" />
   <name value="Person" />
   <title value="居民" />
   <status value="draft" />
-  <date value="2019-10-16" />
+  <date value="2020-12-07T01:50:33.5548553+00:00" />
   <description value="居民，用于建档注册。可用作EMPI主索引。，可关联其他自然人、患者、医生等。扩展了籍贯、学历、国籍等。" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -34,13 +34,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Person.extension:academicQualification">
+    <element id="Person.extension:DegreeOfEducation">
       <path value="Person.extension" />
-      <sliceName value="academicQualification" />
+      <sliceName value="DegreeOfEducation" />
       <definition value="教育背景，非学位" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/AcademicQualification" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/degree-of-education" />
       </type>
     </element>
     <element id="Person.extension:nationality">
@@ -68,7 +68,7 @@
       <definition value="籍贯，即出生地的行政区" />
       <type>
         <code value="Extension" />
-        <profile value="http://StructureDefinition.hl7fhir.cn/AdministrativeDivision" />
+        <profile value="http://StructureDefinition.hl7fhir.cn/administrative-division" />
       </type>
     </element>
     <element id="Person.name">

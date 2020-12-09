@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Reference" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T02:47:44.41+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Reference" />
   <name value="Reference" />
   <title value="引用信息" />
   <status value="draft" />
+  <date value="2020-12-07T02:47:45.092735+00:00" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="rim" />
@@ -46,9 +51,6 @@
       </type>
     </element>
     <element id="Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Reference.display" />
       <short value="资源的文本显示" />
       <definition value="Plain text narrative that identifies the resource in addition to the resource reference.&#xD;&#xA;除资源引用外，标识资源的纯文本叙事。" />

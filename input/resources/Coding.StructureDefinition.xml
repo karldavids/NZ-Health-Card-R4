@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Coding" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2020-03-16T15:00:01.671+00:00" />
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T01:51:46.051+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/Coding" />
   <name value="Coding" />
   <title value="术语编码类型" />
   <status value="draft" />
-  <date value="2020-03-16T14:59:41.9663727Z" />
+  <date value="2020-12-07T01:51:46.5940113+00:00" />
   <fhirVersion value="4.0.0" />
   <mapping>
     <identity value="v2" />
@@ -72,7 +72,7 @@
       <label value="编码由用户选取" />
       <short value="此编码是否是由用户直接选择的" />
       <definition value="此编码是否是由用户直接选择的。例如，从下拉列表框中的选取的代码或含义。" />
-      <comment value="当同一个CodeableConcept里的存在多个的Coding时，将用户直接选择的代码作为编码转换的起点是最合适的。关于“直接选择”究竟意味着什么，存在一些模糊性，可能需要数据交互的多方进一步约定以更全面地澄清这一要素的使用及其后果。&#xD;&#xA;  " />
+      <comment value="当同一个CodeableConcept里的存在多个的Coding时，将用户直接选择的代码作为编码转换的起点是最合适的。关于“直接选择”究竟意味着什么，存在一些模糊性，可能需要数据交互的多方进一步约定以更全面地澄清这一要素的使用及其后果。" />
       <requirements value="这已经被确定为一个临床安全性标准-这明确了“系统/代码”对是由用户显式选择的，而不是由系统根据一些规则或语言处理自动生成的。" />
     </element>
   </differential>

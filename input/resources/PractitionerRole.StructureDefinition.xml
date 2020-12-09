@@ -3,12 +3,13 @@
   <id value="PractitionerRole" />
   <meta>
     <versionId value="1" />
-    <lastUpdated value="2020-05-11T06:32:26.321859+00:00" />
+    <lastUpdated value="2020-12-07T02:47:28.134+00:00" />
   </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/PractitionerRole" />
   <name value="PractitionerRole" />
   <title value="医务人员工作信息" />
   <status value="draft" />
+  <date value="2020-12-07T02:47:28.7708418+00:00" />
   <description value="医务人员提供医疗服务时的相关信息，包括所属组织、科室、角色/岗位等" />
   <fhirVersion value="4.0.1" />
   <mapping>

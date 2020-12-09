@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ChineseEthnicity" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-12-07T01:51:01.058+00:00" />
+  </meta>
   <url value="http://StructureDefinition.hl7fhir.cn/ChineseEthnicity" />
   <name value="ChineseEthnicity" />
   <title value="民族" />
   <status value="draft" />
+  <date value="2020-12-07T01:51:01.6380707+00:00" />
   <description value="中华民族" />
   <fhirVersion value="4.0.0" />
   <mapping>
@@ -50,7 +55,7 @@
       <binding>
         <strength value="required" />
         <description value="民族类别" />
-        <valueSet value="http://ValueSet.hl7fhir.cn/nationalites-of-PRC-vs" />
+        <valueSet value="http://ValueSet.hl7fhir.cn/nationalities-vs" />
       </binding>
     </element>
   </differential>
